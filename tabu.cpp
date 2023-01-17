@@ -370,11 +370,11 @@ void makemove()
 void tabusearch()
 {
     // 输入文件路径
-    filePath = "/Users/travis/CPPProjects/tabucol-master/data/simple5.txt";
+    filePath = "/Users/travis/CPPProjects/LSCByTabuSearch/data/simple3.txt";
     // 运行结果存储路径
-    outFilePath = "/Users/travis/CPPProjects/tabucol-master/simple5result.txt";
+    outFilePath = "/Users/travis/CPPProjects/LSCByTabuSearch/S3_Result.txt";
     // 给定点的颜色数量
-    int numofcolor = 70;
+    int numofcolor = 40;
 
     N12 = numofcolor;
     create_graph();
@@ -389,8 +389,8 @@ void tabusearch()
     while (f > 0)
     {
         iter++;
-        if ((iter % 100000) == 0)
-            std::cout << iter / 100000 << " --- " << f << endl;
+        // if ((iter % 100000) == 0)
+        //     std::cout << iter / 100000 << " --- " << f << endl;
         if ((iter % 100000) == 0)
             ofile << iter << " " << f << " " << K << " " << delt << " " << best_f << endl;
         findmove();
